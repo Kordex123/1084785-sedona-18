@@ -1,0 +1,266 @@
+.review {
+  text-align: center;
+  line-height: 1.63rem;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+}
+
+.review__header {
+  margin-top: 2.69rem;
+  margin-bottom: 1.19rem;
+}
+
+.review__header,
+.person__header,
+.contact__header,
+.impression__header,
+.attraction__header,
+.negative-request__header,
+.positive-request__header,
+.opinion__header {
+  text-align: center;
+  color: black;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 1.56rem;
+}
+
+.review__intro,
+.person__label {
+  color: #333333;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.review__intro {
+  margin: 0 1.25rem;
+}
+
+.review__form {
+  box-sizing: border-box;
+  background-clip: content-box;
+  margin: 0 1.25rem;
+  padding-top: 1.5rem;
+}
+
+.person,
+.contact,
+.impression,
+.attraction {
+  text-align: center;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  margin-bottom: 1.56rem;
+  // padding: 0 1.25rem;
+}
+
+.person {
+  line-height: 3.625rem;
+}
+
+.person__item {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.person__label {
+  float: left;
+  vertical-align: middle;
+
+  &::after {
+    content: ":* ";
+    color: #333333;
+  }
+}
+
+.person__value {
+  overflow: hidden;
+}
+
+.person__input,
+.contact__input {
+  width: 100%;
+  height: 3.62rem;
+  background-color: $light-grey;
+}
+
+.person__input,
+.person__input::placeholder,
+.contact__input,
+.contact__input::placeholder,
+.opinion__text::placeholder {
+  color: black;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  font-size: 1.13rem;
+  line-height: 1.625rem;
+}
+
+.contact {
+  line-height: 1.63rem;
+  text-transform: uppercase;
+}
+
+.contact__item {
+  color: #333333;
+  font-size: 0.825rem;
+  padding-top: 0.56rem;
+}
+
+.contact__input {
+  border: 0;
+  padding-right: 4rem;
+  padding-left: 0.375rem;
+  box-sizing: border-box;
+}
+
+.contact__value {
+  margin-top: 0.875rem;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 3.625rem;
+    height: 3.625rem;
+    background-color: #e6e6e6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.contact--phone::after {
+  background-image: url("../img/icon-phone.svg");
+}
+
+.contact--mail::after {
+  background-image: url("../img/icon-mail.svg");
+}
+
+.impression {
+  line-height: 1.63rem;
+  font-weight: bold;
+}
+
+.impression__input + .impression__label::before,
+.attraction__input + .attraction__label::before {
+  content: "";
+  display: inline-block;
+  border: 0.94rem solid #f2f2f2;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  width: 2.56em;
+  height: 2.56em;
+  margin-right: 1.25rem;
+  vertical-align: middle;
+}
+
+.attraction__input + .attraction__label::before {
+  content: "";
+  border-radius: 10%;
+}
+
+.impression__input:checked + .impression__label {
+  &::before {
+    content: "";
+    background-color: #333333;
+  }
+}
+
+.attraction__input:checked + .attraction__label {
+  &::before {
+    content: "";
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.impression__item,
+.attraction__item {
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2.13rem;
+}
+
+.impression__input,
+.attraction__input {
+  display: none;
+}
+
+.impression__label,
+.attraction__label {
+  font-size: 1.125rem;
+}
+
+
+.attraction {
+  line-height: 1.63rem;
+  font-weight: bold;
+}
+
+.opinion {
+  width: 100%;
+  text-align: center;
+  line-height: 1.63rem;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  margin-bottom: 1.56rem;
+  padding: 1.31rem 1.25rem;
+  box-sizing: border-box;
+
+  &__text {
+    display: block;
+    width: 100%;
+    background-color: #f2f2f2;
+    color: black;
+    height: 10rem;
+    font-weight: bold;
+  }
+}
+
+.button--submit,
+.button--fail,
+.button--success {
+  display: block;
+  width: 100%;
+  height: 3.63rem;
+  background-color: $light-grey-blue;
+  font-size: 1.31rem;
+  font-weight: bold;
+  color: white;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  text-transform: uppercase;
+}
+
+.negative-request,
+.positive-request {
+  display: block;
+  width: 100%;
+  padding: 3.56rem;
+  box-sizing: border-box;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.negative-request {
+  height: 17.5rem;
+}
+
+.positive-request {
+  height: 20.19rem;
+}
+
+.negative-request__message,
+.positive-request__message {
+  text-align: center;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1.56rem;
+  color: #333333;
+  font-size: 0.875rem;
+}

@@ -2,21 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Седона</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <picture class="page-header__logo-image">
-        <img src="https://via.placeholder.com/102x83" width="102" height="83" alt="Sedona logo">
-        </picture>
-      </a>
       <nav class="main-nav">
-        <button class="main-nav_toggle" type="button"><img src="https://via.placeholder.com/23x21" width="23" height="21" alt="main menu"></button>
         <div class="main-nav__wrapper">
           <a class="main-nav__close">
-            <img src="https://via.placeholder.com/23x21" width="23" height="22" alt="menu close">
+            <img class="main-nav__cross" src="./img/icon-cross.svg" width="23" height="22" alt="menu close">
           </a>
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -33,87 +29,111 @@
             </li>
           </ul>
         </div>
+        <div class="main-nav__toggle">
+          <button type="button">
+            <img src="./img/icon-menu.svg" alt="main menu">
+          </button>
+          <a class="page-header__logo">
+            <picture class="page-header__logo-image">
+            <img src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Sedona logo">
+            </picture>
+          </a>
+        </div>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="page-main__welcome">
-        <picture class="page-main__welcome-text">
-          <img src="https://via.placeholder.com/281x214" width="281" height="214" alt="Welcome text">
-        </picture>
         <picture class="page-main__welcome-picture">
-            <img src="https://via.placeholder.com/320x389" width="320" height="389" alt="Welcome picture">
+          <img src="./img/bg-back-mobile@1x.jpg" width="281" height="214" alt="Welcome text">
+          <img src="./img/bg-intro-triangle-mobile.svg" alt="Decoration triangle">
+        </picture>
+        <picture class="page-main__welcome-text">
+            <img src="./img/text-sedona.svg" width="320" height="389" alt="Welcome picture">
         </picture>
       </h1>
       <section class="review">
-        <h3 class="review__header">Оставьте свой отзыв</h3>
+        <h1 class="review__header">Оставьте свой отзыв</h1>
         <p class="review__intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
-        <h3 class="person__header">Представьтесь:</h3>
+        <h1 class="person__header">Представьтесь:</h1>
           <ul class="person">
             <li class="person__item">
-              <label for="first-name">ИМЯ</label>
-              <input type="text" id="first-name" name="user__first-name" required>
+              <label class="person__label" for="first-name">ИМЯ</label>
+              <div class="person__value">
+                <input class="person__input" type="text" id="first-name"
+                name="user__first-name" placeholder="Петр" required>
+              </div>
             </li>
             <li class="person__item">
-              <label for="second-name">ФАМИЛИЯ</label>
-              <input type="text" id="patronymic-name" name="user__patronymic-name" required>
+              <label class="person__label" for="second-name">ФАМИЛИЯ</label>
+              <div class="person__value">
+                <input class="person__input" type="text" id="second-name"
+                name="user__second-name" placeholder="Иванов" required>
+              </div>
             </li>
             <li class="person__item">
-              <label for="patronymic-name">Отчество</label>
-              <input type="text" id="patronymic-name" name="user__patronymic-name">
+              <label class="person__label" for="patronymic-name">Отчество</label>
+              <div class="person__value">
+                <input class="person__input" type="text" id="patronymic-name"
+                name="user__patronymic-name" placeholder="Александрович">
+              </div>
             </li>
           </ul>
-          <h3 class="contact__header">Контактная информация:</h3>
+          <h1 class="contact__header">Контактная информация:</h1>
           <ul class="contact">
             <li class="contact__item">
-              <label for="phone">Контактный телефон</label>
-              <input type="text" id="phone" name="user__phone" placeholder="Введите телефон" required>
+              <label class="contact__label" for="phone">Контактный телефон*:</label>
+              <div class="contact__value contact--phone">
+                <input class="contact__input" type="text" id="phone" name="user__phone" placeholder="Введите телефон" required>
+              </div>
             </li>
             <li class="contact__item">
-              <label for="email">Электронная почта</label>
-              <input type="text" id="email" name="user__email" placeholder="Введите e-mail" required>
+              <label class="contact__label" for="email">Электронная почта*:</label>
+              <div class="contact__value contact--mail">
+                <input class="contact__input" type="text" id="email" name="user__email" placeholder="Введите e-mail" required>
+              </div>
             </li>
           </ul>
-          <h3 class="impression__header">Ваше общее впечатление:</h3>
+          <h1 class="impression__header">Ваше общее впечатление:</h1>
           <ul class="impression">
             <li class="impression__item">
-              <label for="positive">Скорее положительное</label>
-              <input type="radio" id="positive" name="user__impression" value="positive" required>
+              <input class="impression__input" type="radio" id="positive" name="user__impression" value="positive" required checked>
+              <label class="impression__label" for="positive">Скорее положительное</label>
             </li>
             <li class="impression__item">
-              <label for="negative">Скорее отрицательное</label>
-              <input type="radio" id="negative" name="user__impression" value="negative">
+              <input class="impression__input" type="radio" id="negative" name="user__impression" value="negative">
+              <label class="impression__label" for="negative">Скорее отрицательное</label>
             </li>
             <li class="impression__item">
-              <label for="unknown">Затрудняюсь ответить</label>
-              <input type="radio" id="unknown" name="user__impression" value="unknown">
+              <input class="impression__input" type="radio" id="unknown" name="user__impression" value="unknown">
+              <label class="impression__label" for="unknown">Затрудняюсь ответить</label>
             </li>
           </ul>
-          <h3 class="attraction__header">Посещенные достопримечательности:</h3>
+          <h1 class="attraction__header">Посещенные достопримечательности:</h1>
           <ul class="attraction">
             <li class="attraction__item">
-              <label for="bridge">Мост Дьявола</label>
-              <input type="checkbox" id="bridge" name="attraction__bridge" value="Мост Дьявола">
+              <input class="attraction__input" type="checkbox" id="bridge" name="attraction__bridge" value="Мост Дьявола" checked>
+              <label class="attraction__label" for="bridge">Мост Дьявола</label>
             </li>
             <li class="attraction__item">
-              <label for="mount">Гора-Колокол</label>
-              <input type="checkbox" id="mount" name="attraction__mount" value="Гора-Колокол">
+              <input class="attraction__input" type="checkbox" id="mount" name="attraction__mount" value="Гора-Колокол">
+              <label class="attraction__label" for="mount">Гора-Колокол</label>
             </li>
             <li class="attraction__item">
-              <label for="park">Слайд-парк</label>
-              <input type="checkbox" id="park" name="attraction__park" value="Слайд-парк">
+              <input class="attraction__input" type="checkbox" id="park" name="attraction__park" value="Слайд-парк">
+              <label class="attraction__label" for="park">Слайд-парк</label>
             </li>
             <li class="attraction__item">
-              <label for="rocks">Красные скалы</label>
-              <input type="checkbox" id="rocks" name="attraction__rocks" value="Красные скалы">
+              <input class="attraction__input" type="checkbox" id="rocks" name="attraction__rocks" value="Красные скалы">
+              <label class="attraction__label" for="rocks">Красные скалы</label>
             </li>
           </ul>
-          <h3 class="opinion__header">Опишите свои эмоции:</h3>
+          <h1 class="opinion__header">Опишите свои эмоции:</h1>
           <div class="opinion">
-            <textarea name="message" id="message" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="opinion__text" name="message" id="message" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
-          <button class="btn submit" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
+          <button class="button--submit" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
         </form>
       </section>
     </main>
@@ -133,21 +153,20 @@
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
-        <h3 class="copyright__text">Разработано:</h3>
+        <h1 class="copyright__text">Разработано:</h1>
         <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
         </a>
       </div>
     </footer>
     <div class="negative-request">
-      <h3 class="negative-request__header">ЧТО-ТО ПОШЛО НЕ ТАК!</h3>
+      <h1 class="negative-request__header">ЧТО-ТО ПОШЛО НЕ ТАК!</h1>
       <p class="negative-request__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-      <button class="btn btn--fail">OK</button>
+      <button class="button button--fail">OK</button>
     </div>
     <div class="positive-request">
-      <h3 class="positive-request__header">Ваш отзыв отправлен!</h3>
+      <h1 class="positive-request__header">Ваш отзыв отправлен!</h1>
       <p class="positive-request__message">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="btn btn--success">Закрыть окно</button>
+      <button class="button button--success">Закрыть окно</button>
     </div>
   </body>
 </html>
