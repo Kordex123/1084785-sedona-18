@@ -1,0 +1,53 @@
+.offers {
+
+  text-align: center;
+  font-family: "PT Sans";
+  text-transform: uppercase;
+  width: 100%;
+
+  &__title {
+    color: black;
+    font-size: 1.31rem;
+    font-weight: bold;
+    margin-top: 2.06rem;
+  }
+
+  &__description {
+    color: #333333;
+    font-size: 0.875rem;
+    margin-top: 2.5rem;
+  }
+
+  &__search {
+    display: inline-block;
+    color: white;
+    font-size: 1.31rem;
+    font-weight: bold;
+    margin-top: 2.06rem;
+    width: 17.5rem;
+    // height: 3.62rem;
+    background-color: $light-grey-blue;
+    padding-top: 1.12rem;
+    padding-bottom: 1.12rem;
+  }
+
+  &__map {
+    position: relative;
+    display: block;
+    margin-top: 3.06rem;
+    width: 100%;
+    //  .offers__marker {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translateX(-50%) translateY(-50%);
+    // }
+  }
+}
+
+.offers__marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
